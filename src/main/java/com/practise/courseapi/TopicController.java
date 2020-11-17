@@ -3,7 +3,7 @@ package com.practise.courseapi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class TopicController {
@@ -11,12 +11,12 @@ public class TopicController {
     private TopicService topicService;
 
     @RequestMapping("/topics")
-    public List<Topic> getAllTopics() {
+    public Iterable<Topic> getAllTopics() {
         return topicService.getAllTopics();
     }
 
     @RequestMapping("/topics/{id}")
-    public Topic getTopics(@PathVariable("id") String id) {
+    public Optional<Topic> getTopics(@PathVariable("id") String id) {
         return topicService.getTopic(id);
     }
 
@@ -34,5 +34,4 @@ public class TopicController {
     public void deleteTopic(@PathVariable("id") String id) {
         topicService.deleteTopic(id);
     }
-
 }

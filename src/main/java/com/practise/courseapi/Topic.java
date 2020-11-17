@@ -1,11 +1,23 @@
 package com.practise.courseapi;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.couchbase.core.index.CompositeQueryIndex;
+import org.springframework.data.couchbase.core.index.QueryIndexed;
+import org.springframework.data.couchbase.core.mapping.Document;
+import org.springframework.data.couchbase.core.mapping.Field;
+
+@Document
+@CompositeQueryIndex(fields = {"id", "name"})
 public class Topic {
+    @Id
     private String id;
+    @Field
+    @QueryIndexed
     private String name;
+    @Field
     private String description;
 
-    public Topic(){
+    public Topic() {
 
     }
 
