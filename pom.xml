@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.practise</groupId>
-    <artifactId>course-api</artifactId>
+    <artifactId>topic-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>course-api</name>
+    <name>topic-api</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,7 +21,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>/
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,6 +38,12 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-couchbase</artifactId>
             <version>4.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
